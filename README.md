@@ -1,5 +1,5 @@
 # CRM-de-Clientes
-#📊 CRM - Administrador de Clientes
+# 📊 CRM - Administrador de Clientes
 
 **CRM (Customer Relationship Management)** es una aplicación web desarrollada con **React**, **Node.js** y **MongoDB**, pensada para facilitar la gestión de clientes de manera eficiente, intuitiva y segura. Ideal para pequeñas y medianas empresas que necesitan llevar el control de su cartera de clientes, contactos e historial de interacciones.
 
@@ -19,10 +19,4 @@
 - 👤 Login seguro con tokens y protección de rutas  
 - 📱 Interfaz responsiva y moderna
 
-## 🚀 Cómo ejecutar el proyecto
 
-### 1. Clonar el repositorio
-
-```bash
-git clone https://github.com/TU-USUARIO/estadiaControlAccesso.git
-cd estadiaControlAccesso
