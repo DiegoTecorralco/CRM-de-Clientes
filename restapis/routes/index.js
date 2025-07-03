@@ -1,9 +1,9 @@
-const express = require ('express')
-const router = express.Router();
-const clienteController = require('../controllers/clienteController');
+import express from 'express';
+import clienteController from '../controllers/clienteController.js';
 
-module.exports = function (){
-   //Agregar clentes via POST
-   router.post('/clientes', clienteController.nuevoCLiente)
-    return router;
-}
+const router = express.Router();
+
+router.post('/clientes', clienteController.nuevoCliente);
+router.get('/clientes', clienteController.mostrarClientes);
+router.get('/clientes/:idCliente', clienteController.mostrarCliente);
+export default router;
