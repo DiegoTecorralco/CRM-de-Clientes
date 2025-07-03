@@ -1,0 +1,19 @@
+{
+  "name": "restapisnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "keywords": [],
+  "author": "Diego Tecorralco",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "moongose": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
