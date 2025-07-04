@@ -1,8 +1,7 @@
 import express from 'express';
-import router from './routes/index.js'; 
+import clientesRoutes from './routes/clientesRoutes.js'; 
 import mongoose from 'mongoose';
-
-
+import productosRoutes from './routes/productosRoutes.js';
 
 mongoose.set('strictQuery', true); // Evita warning de Mongoose
 
@@ -19,7 +18,8 @@ const app = express();
 app.use(express.json()); 
 
 // Rutas
-app.use('/', router);
+app.use('/', clientesRoutes);
+app.use('/', productosRoutes);
 
 app.listen(5000, () => {
   console.log('Servidor corriendo en http://localhost:5000');

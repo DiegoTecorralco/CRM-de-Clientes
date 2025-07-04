@@ -19,7 +19,7 @@ clienteController.mostrarClientes = async (req,res) => {
         res.json(Clientes);
     } catch (error) {
         console.error(error);
-        res.status(400).json({ mensaje: 'Error al mostrar los clientes', error: error.message });
+        res.status(400).json({ message: 'Error al mostrar los clientes', error: error.message });
     }
 }
 
@@ -31,4 +31,29 @@ clienteController.mostrarCliente = async (req, res) => {
     res.json(cliente);
 }
 
+
+clienteController.actualizarCliente = async (req,res) => {
+  try {
+    const cliente = await Cliente.findOneAndUpdate ({ _id : req.params.idCliente}, 
+    req.body, {
+      new: true
+    });
+    res.json({message: 'Cliente Actualizado con exito', cliente});
+  } catch (error) {
+    res.status(400).json({ message: "Error al actualizar Cliente", error: error.mensaje }); 
+  }
+}
+
+clienteController.eliminarCliente= async (req,res) => {
+
+  try {
+    await Cliente.findByIdAndDelete( {_id : req.params.idCliente})
+  res.json({message: 'El Cliente ha sido eliminado exitosamente'});
+  } catch (error) {
+    res.status(400).json({ message: "Error al eliminqr al cliente", error: error.mensaje }); 
+  }
+  0
+};
+
 export default clienteController;
+
